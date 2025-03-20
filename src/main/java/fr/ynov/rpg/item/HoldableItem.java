@@ -11,4 +11,20 @@ public abstract class HoldableItem extends Item {
         this.rarity = rarity;
         this.durability = durability;
     }
+
+    public String getRarity(){
+        return this.rarity;
+    }
+
+     public int getDurability(){
+        return this.durability;
+    }
+
+    public void setDurability(int i){
+        this.durability = i;
+    }
+
+    public boolean isBroken(){
+        return this.durability < 1;
+    }
 }
