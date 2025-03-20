@@ -14,4 +14,26 @@ public abstract class Item {
         this.price = price;
         this.owner = null;
     }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public int getStat(){
+        return this.stat;
+    }
+
+    public int getPrice(){
+        return this.price;
+    }
+
+    public Hero getOwner(){
+        return this.owner;
+    }
+
+    public void setOwner(Hero owner){
+        this.owner = owner;
+    }
+
+    public abstract void show();
 }
