@@ -9,6 +9,14 @@ public abstract class Building {
         this.description=description;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public String getDescription(){
+        return this.description;
+    }
+
     public void show(){
         System.out.println("Name: " + this.name + "\nDescription: " + this.description);
     }
