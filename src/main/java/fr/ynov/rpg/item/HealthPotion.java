@@ -8,5 +8,11 @@ public class HealthPotion extends Potion{
     public void show(){
         System.out.println("Name: " + getName() + "\nEffect: heal " + getStat() + " HP");
     }
-    public void drink(){}
+    public void drink(){
+        int hp = this.getOwner().getHealth()+this.getStat();
+        if(hp>100){
+            hp=100;
+        }
+        this.getOwner().setHealth(hp);
+    }
 }

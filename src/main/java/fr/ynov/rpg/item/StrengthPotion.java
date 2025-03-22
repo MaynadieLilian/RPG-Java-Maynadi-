@@ -9,5 +9,8 @@ public class StrengthPotion extends Potion{
         System.out.println("Name: " + getName() + "\nEffect: +" + getStat() + " attack");
     }
 
-    public void drink(){}
+    public void drink(){
+        int att = this.getOwner().getAttack()+this.getStat();
+        this.getOwner().setAttack(att);
+    }
 }
