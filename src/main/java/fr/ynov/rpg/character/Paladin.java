@@ -14,22 +14,24 @@ public class Paladin extends Hero {
     }
 
     public void equipSword(Sword sword){
+        if(this.sword != null){
+            unequipSword(sword);
+        }
         this.sword = sword;
         setAttack(this.getAttack()+sword.getStat());
     }
 
     public void unequipSword(Sword sword){
         this.sword = null;
-        sword = null;
+        setAttack(this.getAttack()-sword.getStat());
     }
 
     public void equipShield(Shield shield){
         this.shield = shield;
     }
 
-    public void unequipShield(Shield shield){
+    public void unequipShield(){
         this.shield = null;
-        shield = null;
     }
 
     public void takeDamage(int damage){
@@ -47,7 +49,7 @@ public class Paladin extends Hero {
             this.sword.setDurability(this.sword.getDurability()-1);
         }
         if(character.getHealth() == 0){
-            kill(character);
+            this.kill(character);
         }
     }
 
