@@ -13,9 +13,8 @@ import java.util.Scanner;
 
 public class Merchant extends Building {
     private Inventory inventory;
-    private Scanner scanner;
 
-    Merchant(String name,String description) {
+    public Merchant(String name, String description) {
         super(name,description);
     }
 
@@ -34,6 +33,7 @@ public class Merchant extends Building {
 
     public void browsePotions(Hero hero) {
         System.out.println("1: Potion of Health(20 HP), 2: Potion of Strength (5 attack), 3: Back");
+        Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
         if (input == 1) {
             System.out.println("That will cost 10 gold.\n1: Buy\n2: Back");
@@ -60,6 +60,7 @@ public class Merchant extends Building {
 
     public void browseSwords(Hero hero) {
         System.out.println("1: Wooden Sword\n2: Iron Sword\n3: Netherith Sword\n4: Sword of Drake\n5: Back");
+        Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
         if (input == 1) {
             System.out.println("That will cost 30 gold\n1: Buy\n2: Exit");
@@ -104,6 +105,7 @@ public class Merchant extends Building {
 
     public void browseShields(Hero hero) {
         System.out.println("1: Wooden Shield\n2: Iron Shield\n3: Netherith Shield\n4: Shield of the Protector\n5: Back");
+        Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
         if (input == 1) {
             System.out.println("That will cost 30 gold\n1: Buy\n2: Exit");
@@ -132,6 +134,7 @@ public class Merchant extends Building {
 
     public void browseStaffs(Hero hero) {
         System.out.println("1: Wooden Staff\n2: Iron Staff\n3: Netherith Staff\n4: Staff of the Great Wizard\n5: Back");
+        Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
         if (input == 1) {
             System.out.println("That will cost 30 gold\n1: Buy\n2: Exit");
@@ -160,6 +163,7 @@ public class Merchant extends Building {
 
     public void browseBackpacks(Hero hero) {
         System.out.println("1: Backpack\n2: Back");
+        Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
         if (input == 1) {
             System.out.println("This Backpack gives an extra 5 spaces, it costs 100 gold\n1: Buy\n2: Exit");
@@ -179,6 +183,7 @@ public class Merchant extends Building {
 
     public void browseItems(Hero hero) {
         System.out.println("1: Browse Potions\n2: Browse Swords\n3: Browse Shields\n4: Browse Staffs\n5: Browse Backpacks\n6: Exit");
+        Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
         switch (input) {
             case 1:
@@ -208,6 +213,7 @@ public class Merchant extends Building {
 
     public void enter(Hero hero) {
         System.out.println("Hello and welcome to the merchant, would you like to buy anything?\n1: Yes\n2: No");
+        Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
         if (input == 2) {
             System.out.println("Goodbye, see you next time!");

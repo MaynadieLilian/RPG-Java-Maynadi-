@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Tavern extends Building{
     private int price;
 
-    Tavern(String name, String description, int price) {
+    public Tavern(String name, String description, int price) {
         super(name, description);
         this.price = price;
     }

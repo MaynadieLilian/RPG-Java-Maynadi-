@@ -5,7 +5,7 @@ import fr.ynov.rpg.item.Sword;
 public class Warrior extends Hero {
     private Sword sword;
 
-    Warrior(String name){
+    public Warrior(String name){
         super(name);
         sword = null;
     }

@@ -5,9 +5,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Village {
-    private List<Building> buildings;
+    private ArrayList<Building> buildings;
 
-    Village(List<Building> buildings){
-        this.buildings = buildings;
+    public Village(){
+        this.buildings = new ArrayList<>();
+    }
+
+    public ArrayList<Building> getBuildings() {
+        return this.buildings;
+    }
+
+    public void addBuilding(Building building){
+        this.buildings.add(building);
+    }
+
+    public void removeBuilding(int index){
+        this.buildings.remove(index);
+    }
+
+    public void show(){
+        System.out.println("Village: ");
+        for(int i = 0; i < this.buildings.size(); i++){
+            System.out.println(i+1+": "+this.buildings.get(i).getName()+" ");
+        }
     }
 }
