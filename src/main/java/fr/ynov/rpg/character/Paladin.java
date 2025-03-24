@@ -7,7 +7,7 @@ public class Paladin extends Hero {
     private Sword sword;
     private Shield shield;
 
-    Paladin(String name){
+    public Paladin(String name){
         super(name);
         this.sword = null;
         this.shield = null;

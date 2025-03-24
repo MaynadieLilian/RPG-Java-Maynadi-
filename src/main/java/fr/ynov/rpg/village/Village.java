@@ -7,8 +7,8 @@ import java.util.List;
 public class Village {
     private ArrayList<Building> buildings;
 
-    Village(ArrayList<Building> buildings){
-        this.buildings = buildings;
+    public Village(){
+        this.buildings = new ArrayList<>();
     }
 
     public ArrayList<Building> getBuildings() {

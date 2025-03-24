@@ -7,7 +7,7 @@ import java.util.Random;
 public class Wizard extends Hero {
     private Staff staff;
 
-    Wizard(String name){
+    public Wizard(String name){
         super(name);
         this.staff = null;
     }
