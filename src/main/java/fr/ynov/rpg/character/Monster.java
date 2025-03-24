@@ -1,7 +1,7 @@
 package fr.ynov.rpg.character;
 
 public class Monster extends Character {
-    Monster(){
-        super("monster",50,5,5);
+    public Monster(String name){
+        super(name,50,5,5);
     }
 }

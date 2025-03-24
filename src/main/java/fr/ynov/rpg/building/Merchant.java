@@ -159,7 +159,7 @@ public class Merchant extends Building {
     }
 
     public void browseBackpacks(Hero hero) {
-        System.out.println("1: Backpack\n2: Big Backpack\n3: Back");
+        System.out.println("1: Backpack\n2: Back");
         int input = scanner.nextInt();
         if (input == 1) {
             System.out.println("This Backpack gives an extra 5 spaces, it costs 100 gold\n1: Buy\n2: Exit");
@@ -168,17 +168,6 @@ public class Merchant extends Building {
                     hero.getInventory().setSpaces(10);
                     hero.setGold(hero.getGold() - 100);
                     System.out.println("You now have 10 inventory spaces");
-                } else {
-                    System.out.println("You don't have enough gold");
-                }
-            }
-        } else if (input == 2) {
-            System.out.println("This Backpack gives an extra 10 spaces, it costs 200 gold\n1: Buy\n2: Exit");
-            if (scanner.nextInt() == 1) {
-                if (hero.getGold() >= 200) {
-                    hero.getInventory().setSpaces(15);
-                    hero.setGold(hero.getGold() - 200);
-                    System.out.println("You now have 15 inventory spaces");
                 } else {
                     System.out.println("You don't have enough gold");
                 }
