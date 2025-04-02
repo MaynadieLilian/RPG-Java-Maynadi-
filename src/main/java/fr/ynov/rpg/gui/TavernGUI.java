@@ -35,7 +35,11 @@ public class TavernGUI extends JFrame {
     }
 
     public void healGui(Hero hero ,Tavern tavern){
-        tavern.heal(hero);
-        textArea.setText("Welcome to the Merchant !\nYour Gold : " + hero.getGold()+"\nThat good now you have 100 health");
+         if(hero.getGold()<30){
+             textArea.setText("Welcome to the Merchant !\nYour Gold : " + hero.getGold()+"\nNot enough Gold to get full health");
+         }else {
+             tavern.heal(hero);
+             textArea.setText("Welcome to the Merchant !\nYour Gold : " + hero.getGold()+"\nThat good now you have 100 health");
+         }
     }
 }
