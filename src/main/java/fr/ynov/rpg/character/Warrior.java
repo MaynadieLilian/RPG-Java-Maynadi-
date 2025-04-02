@@ -47,4 +47,18 @@ public class Warrior extends Hero {
             System.out.println(this.getInventory().getItems().get(i).getName()+" ");
         }
     }
+
+    public String showGUI(){
+        StringBuilder str = new StringBuilder("Name: " + this.getName() + "\nHealth: " + this.getHealth() + "\nAttack: " + this.getAttack() + "\nGold: " + this.getGold() + "\nSword: ");
+        if(this.sword != null){
+            str.append(this.sword.getName());
+        }else {
+            str.append("No Sword");
+        }
+        str.append("\nInventory: ");
+        for(int i =0;i<this.getInventory().getItems().size();i++){
+            str.append(this.getInventory().getItems().get(i).getName()).append(" ");
+        }
+        return str.toString();
+    }
 }

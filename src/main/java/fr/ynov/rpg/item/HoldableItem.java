@@ -1,6 +1,5 @@
 package fr.ynov.rpg.item;
 
-import fr.ynov.rpg.character.Warrior;
 
 public abstract class HoldableItem extends Item {
     private String rarity;
@@ -22,9 +21,5 @@ public abstract class HoldableItem extends Item {
 
     public void setDurability(int i){
         this.durability = i;
-    }
-
-    public boolean isBroken(){
-        return this.durability < 1;
     }
 }

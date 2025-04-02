@@ -13,10 +13,6 @@ public abstract class Building {
         return this.name;
     }
 
-    public String getDescription(){
-        return this.description;
-    }
-
     public void show(){
         System.out.println("Name: " + this.name + "\nDescription: " + this.description);
     }

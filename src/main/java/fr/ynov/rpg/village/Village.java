@@ -2,7 +2,6 @@ package fr.ynov.rpg.village;
 import fr.ynov.rpg.building.Building;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Village {
     private ArrayList<Building> buildings;
@@ -17,10 +16,6 @@ public class Village {
 
     public void addBuilding(Building building){
         this.buildings.add(building);
-    }
-
-    public void removeBuilding(int index){
-        this.buildings.remove(index);
     }
 
     public void show(){

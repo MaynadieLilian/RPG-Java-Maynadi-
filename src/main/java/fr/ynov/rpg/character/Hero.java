@@ -11,15 +11,6 @@ public abstract class Hero extends Character {
         this.inventory = new Inventory();
     }
 
-    public void pickup(Item item){
-        this.inventory.addItem(item);
-    }
-
-    public void throwAway(int index){
-        Item item = this.inventory.removeItem(index);
-        item = null;
-    }
-
     public void drink(Potion potion){
         potion.drink();
     }

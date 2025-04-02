@@ -1,6 +1,5 @@
 package fr.ynov.rpg.game;
 
-import fr.ynov.rpg.building.Building;
 import fr.ynov.rpg.building.Dungeon;
 import fr.ynov.rpg.building.Merchant;
 import fr.ynov.rpg.building.Tavern;
@@ -9,8 +8,6 @@ import fr.ynov.rpg.character.Paladin;
 import fr.ynov.rpg.character.Warrior;
 import fr.ynov.rpg.character.Wizard;
 import fr.ynov.rpg.village.Village;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
@@ -32,6 +29,10 @@ public class Game {
         return this.hero;
     }
 
+    public void setHero(Hero hero){
+        this.hero = hero;
+    }
+
     public Village getVillage(){
         return this.village;
     }
@@ -39,7 +40,7 @@ public class Game {
     public void initilaize(){
         Scanner sc =new Scanner(System.in);
         System.out.println("Quick, the village needs you to defend it against the monsters that have awoken in the mines!\nPick a Hero, type 1 for Warrior, 2 for Paladin or 3 for Wizard.");
-        System.out.println("Each hero has a diffenrent ability, Warriors do an extra 50% more damage, paladins can equip shields to block damage and wizards have a 20% chance to dodge attacks.");
+        System.out.println("Each hero has a different ability, Warriors do an extra 50% more damage, paladins can equip shields to block damage and wizards have a 20% chance to dodge attacks.");
         String type=sc.nextLine();
         System.out.println("What is your name?");
         String name=sc.nextLine();
@@ -53,6 +54,7 @@ public class Game {
     }
 
     public void startGame(){
+        initilaize();
         Scanner sc =new Scanner(System.in);
         while(this.hero.getHealth()!=0){
             this.hero.show();

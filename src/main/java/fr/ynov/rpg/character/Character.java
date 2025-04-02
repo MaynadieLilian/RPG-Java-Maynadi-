@@ -63,4 +63,8 @@ public abstract class Character {
     public void show(){
         System.out.println("Name: "+this.name+"\nHealth: "+this.health+"\nAttack: "+this.attack);
     }
+
+    public String showGUI(){
+        return "Name: "+this.name+"\nHealth: "+this.health+"\nAttack: "+this.attack;
+    }
 }
