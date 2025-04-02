@@ -12,10 +12,13 @@ A Java RPG where you play as a hero exploring a dungeon filled with monsters and
 
 ## ️ Installation & Execution
 ### 1 **Requirements**
-- Java JDK 17+
-- An IDE like IntelliJ IDEA or Eclipse
+- Java JDK 17+ (link for update your Java JDK : https://jdk.java.net/)
+- An IDE like IntelliJ IDEA or Vs code
 
 ### 2 **Installation**
 Clone the repository to your local machine:
 ```sh
 git clone https://github.com/MaynadieLilian/RPG-Java-Maynadi-.git
+```
+### 3 **Run**
+- Go in the package Main and in the class ApplicationRunner and just run the main methode.
